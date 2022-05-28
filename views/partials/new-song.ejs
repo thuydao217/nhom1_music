@@ -1,0 +1,53 @@
+<div class="box">
+  <h3 class="title-caption">BÀI HÁT MỚI</h3>
+  <form action="/songs" method="post" enctype="multipart/form-data">
+    <div class="field__group">
+      <label>Tên bài hát</label>
+      <input
+        placeholder="Nhập Tên..."
+        type="text"
+        required
+        minlength="2"
+        maxlength="100"
+        name="name"
+      />
+    </div>
+    <div class="field__group">
+      <label>Nghệ sĩ</label>
+      <input
+        required
+        minlength="2"
+        maxlength="100"
+        placeholder="Nhập tên nghệ sĩ..."
+        type="text"
+        name="singer"
+      />
+    </div>
+
+    <div class="field__group">
+      <label>Ảnh hiển thị </label>
+      <input
+        accept="image/png, image/jpg, image/jpeg"
+        class="imagedrop"
+        type="file"
+        name="image"
+        required
+      />
+    </div>
+
+    <div class="field__group">
+      <label>Video </label>
+      <input
+        accept="audio/mp3, audio/mpeg"
+        class="imagedrop"
+        name="video"
+        required
+        type="file"
+      />
+    </div>
+    <div class="field__group" style="margin-top: 20px">
+      <label></label>
+      <button class="button">LƯU</button>
+    </div>
+  </form>
+</div>

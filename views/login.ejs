@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stylesheets/login.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <!-- Register form -->
+        <form method="post" action="/register" class="register-form">
+          <h2>Đăng Ký</h2>
+
+          <input
+            autofocus
+            name="name"
+            type="text"
+            placeholder="name"
+            required
+            maxlength="10"
+          />
+          <input
+            name="email"
+            type="text"
+            placeholder="email address"
+            required
+            minlength="6"
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="password"
+            required
+            minlength="6"
+          />
+          <button>create</button>
+          <p class="message">Already registered? <span>Sign In</span></p>
+        </form>
+
+        <!-- Login form -->
+        <form method="post" action="/login" class="login-form">
+          <h2>Đăng Nhập</h2>
+
+          <% if (errors.length > 0) { %>
+          <p class="error"><%= errors%></p>
+          <% } %> <% if (success.length > 0) { %>
+          <p class="success"><%= success%></p>
+          <% } %>
+
+          <input autofocus name="email" type="text" placeholder="email" />
+          <input name="password" type="password" placeholder="password" />
+          <button>login</button>
+          <p class="message">Not registered? <span>Create an account</span></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>

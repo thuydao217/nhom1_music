@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/admin.css" />
+    <link rel="stylesheet" href="stylesheets/song-list.css" />
+  </head>
+  <body>
+    <div class="sidebar-container"><%- include('sidebar')%></div>
+    <div class="page">
+      <div class="content">
+        <div class="title">
+          <div class="title__text">
+            <h1>Admin</h1>
+          </div>
+          <ul class="menu">
+            <li><span class="menu-item__new-song active">Bài hát mới</span></li>
+            <li><span class="menu-item__list-song">Danh sách</span></li>
+          </ul>
+          <div class="title__extras" style="font-size: 20px; padding-bottom: 10px;"><%= user.name %></div>
+        </div>
+
+        <div class="new-song__container content__main">
+          <!-- Add form -->
+          <div class="content__main-page">
+            <%- include('partials/new-song')%>
+            <div
+              style="text-align: center; margin-left: 128px; margin-right: 30px"
+            >
+              <% if (errors.length > 0) { %>
+              <p class="error"><%= errors%></p>
+              <% } %> <% if (success.length > 0) { %>
+              <p class="success"><%= success%></p>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Status -->
+          <div class="content__main-sidebar">
+            <div class="box">
+              <h3 class="title-caption">Số bài hát</h3>
+
+              <div class="box__line new-songs">
+                <h5>Bài hát mới</h5>
+                <span class="nums" style="background-color: red"> </span>
+              </div>
+              <div class="box__line total-song">
+                <h5>Bài hát</h5>
+                <span class="nums"> </span>
+              </div>
+              <div class="box__line total-singer">
+                <h5>Nghệ sĩ</h5>
+                <span class="nums" style="background-color: black"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- List songs -->
+        <div class="list-song__container d-none">
+          <%- include('partials/song-list')%>
+        </div>
+      </div>
+    </div>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>
