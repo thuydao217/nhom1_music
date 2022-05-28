@@ -1,0 +1,274 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color:darkslateblue;
+} 
+
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  margin-left: 280px;
+  background-color: darkslateblue;
+}
+
+.content .title {
+  height: 150px;
+  background-image: url("../upload_2/img_2/admin_head.gif");
+  background-position: center;
+  background-size:contain;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #e7e7e7;
+  z-index: 99;
+}
+
+.content .title__extras {
+  display: flex;
+  align-items: center;
+}
+
+.content .menu {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.content .menu span {
+  text-decoration: none;
+  padding: 6px 40px;
+  border-radius: 4px;
+  font-size: 25px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.content .menu span.active {
+  background:local;
+}
+
+.content .content__main {
+  padding: 30px;
+  position: relative;
+  display: flex;
+}
+.content__main-page {
+  width: 100%;
+  margin-right: 300px;
+}
+
+.content__main-sidebar {
+  width: 270px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.box {
+  background-color: white;
+  padding: 30px;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+
+.box:hover {
+  box-shadow: 0 10px 30px rgba(#1b2327, 0.05);
+}
+
+h5 {
+  margin-right: auto;
+  font-weight: 600;
+}
+
+a,
+a:visited {
+  color: #e7e7e7;
+  margin-left: 5px;
+}
+
+.box__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+}
+
+.box__line:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.nums {
+  background-color: #22c064;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #e7e7e7 !important;
+}
+
+.title-caption {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Form elements */
+
+.field__group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 100px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.field__group input[type='text']:focus {
+  outline: none;
+}
+
+.field__group input {
+  width: 100%;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 10px;
+  border: 1px solid #e7e7e7;
+}
+
+.field__group .imagedrop {
+  background-color: #e7e7e7;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  cursor: pointer;
+}
+
+/* UI */
+.button {
+  border: 0;
+  background-color: forestgreen;
+  width: 100%;
+  color: #e7e7e7;
+  height: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.button:hover {
+  background-color:green;
+}
+.button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  background-color:green ;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  background-image: url(https://i.gifer.com/O39B.gif);
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  height: 100%;
+  left: 0;
+}
+
+.sidebar .text {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  width: 100%;
+  overflow: hidden;
+  line-height: 60px;
+}
+
+nav ul li a {
+  position: relative;
+  color: #e7e7e7;
+  text-decoration: none;
+  font-size: 24px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+
+nav ul li a:hover {
+  color: darkblue;
+  background: white;
+  border-left-color: darkblue;
+  transition: 0.2s;
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+nav ul .feat-show.show {
+  display: block;
+}
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 80px;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* .submit-song_message {
+} */
+
+.error {
+  color: white;
+  background: #d53d3d;
+  padding: 4px;
+}
+
+.success {
+  color: white;
+  background: #22c064;
+  padding: 4px;
+}
